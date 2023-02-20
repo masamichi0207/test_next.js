@@ -19,6 +19,7 @@ export default function skills() {
         ここにはスキルを書く
         <ul>
           {skills.map((skill) => (
+            // 最初のタグにはkeyを入れる
             <li key={skill}>{skill}</li>
           ))}
         </ul>
