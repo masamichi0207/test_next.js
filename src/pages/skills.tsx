@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-
+import BasicTemplate from "../components/Templates/BasicTemplate"
 const inter = Inter({ subsets: ['latin'] })
 
 export default function skills() {
@@ -15,15 +15,17 @@ export default function skills() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        ここにはスキルを書く
-        <ul>
-          {skills.map((skill) => (
-            // 最初のタグにはkeyを入れる
-            <li key={skill}>{skill}</li>
-          ))}
-        </ul>
-      </main>
+      <BasicTemplate>
+        <main className={styles.main}>
+          ここにはスキルを書く
+          <ul>
+            {skills.map((skill) => (
+              // 最初のタグにはkeyを入れる
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </main>
+      </BasicTemplate>
     </>
   )
 }

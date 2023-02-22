@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import Styles from '../styles/message.css';
+// import '../styles/message.css';
 // import styles from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -32,22 +32,27 @@ export default function Message() {
             </Head>
 
             <main >
-
-                <div id="talk-room">
-                    <Image
+                <div id="talk-room" style={{
+                    height: "100 %",
+                    overflow: "scroll"
+                }}>
+                    <img
                         src={"/talk_back.png"}
                         id={"back"}
-                        width={300}
-                        height={700}
+                        width="100%"
+                        height="780px"
                     />
                 </div>
-                <div >
-                </div>
-                <div id="text-are">
+                <div id="text-area" style={{ textAlign: 'center' }}>
+                    <select name="sample">
+                        <option value="sample">サム</option>
+                        <option value="sample">アンディ</option>
+                    </select>
+                    <input type="text" placeholder='メッセージを入力してください' style={{ width: "89%" }} />
 
-                    <input type="text" placeholder='メッセージを入力してください' />
                     <Button variant="primary">送信</Button>
-
+                </div>
+                <div >
                 </div>
             </main>
 

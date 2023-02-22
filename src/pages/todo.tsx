@@ -4,13 +4,15 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { finished } from 'stream';
-
+import BasicTemplate from "../components/Templates/BasicTemplate"
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Todo() {
     // useState:状態のおまじない
     //リスト 　todoは変数、setTodoは関数todoを変更するときに使う
     // string
+
+
     const [todo, setTodo] = useState<string[]>(
         ["不動産案件の学生を集める",
             "先輩の論文を読む",
@@ -41,37 +43,39 @@ export default function Todo() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={styles.main}>
-                <h1>todoリスト</h1>
-                <div>
-                    <input type="text" placeholder='ToDoを追加'
-                        onChange={(event) => setInputItem(event.target.value)}
-                        value={inputItem}
-                    />
-                    <button onClick={() => insertTodo()}>追加</button>
-                </div>
+            <BasicTemplate>
+                <main className={styles.main}>
+                    <h1>todoリスト</h1>
+                    <div>
+                        <input type="text" placeholder='ToDoを追加'
+                            onChange={(event) => setInputItem(event.target.value)}
+                            value={inputItem}
+                        />
+                        <button onClick={() => insertTodo()}>追加</button>
+                    </div>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>TODO</th>
-                            <th>完了</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {todo.map((item) => {
-                            return (
-                                <tr key={item}>
-                                    <td>{item}</td>
-                                    <td>
-                                        <button onClick={() => finishedItem(item)}>完了</button>
-                                    </td>
-                                </tr>
-                            )
-                        })}
-                    </tbody>
-                </table>
-            </main>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>TODO</th>
+                                <th>完了</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {todo.map((item) => {
+                                return (
+                                    <tr key={item}>
+                                        <td>{item}</td>
+                                        <td>
+                                            <button onClick={() => finishedItem(item)}>完了</button>
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                </main>
+            </BasicTemplate>
         </>
     )
 }

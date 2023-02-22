@@ -4,6 +4,7 @@ interface ExternalSiteCardProps {
     siteUrl: string;
     siteIcon: string;
     siteIconDescription?: string;
+    children?: React.ReactNode;
     // ?つけるとなくてもエラー吐かない
 }
 
