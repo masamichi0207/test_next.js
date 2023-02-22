@@ -39,12 +39,12 @@ export default function Message() {
                     overflow: "scroll",
                     background: "url(/talk.png)"
                 }}>
-                    <div class="box-left">
-                        <p class="message-box white">こんにちは</p>
+                    <div className="box-left">
+                        <p className="message-box white">こんにちは</p>
                     </div>
 
-                    <div class="box-right">
-                        <p class="message-box green">こんにちは</p>
+                    <div className="box-right">
+                        <p className="message-box green">こんにちは</p>
                     </div>
 
 
