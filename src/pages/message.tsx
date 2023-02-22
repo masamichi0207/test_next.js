@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import React from "react";
 import { Inter } from '@next/font/google'
 // import '../styles/message.css';
 // import styles from '@/styles/Home.module.css'
@@ -33,15 +34,20 @@ export default function Message() {
 
             <main >
                 <div id="talk-room" style={{
-                    height: "100 %",
-                    overflow: "scroll"
+                    width: "100%",
+                    height: "780px",
+                    overflow: "scroll",
+                    background: "url(/talk.png)"
                 }}>
-                    <img
-                        src={"/talk_back.png"}
-                        id={"back"}
-                        width="100%"
-                        height="780px"
-                    />
+                    <div class="box-left">
+                        <p class="message-box white">こんにちは</p>
+                    </div>
+
+                    <div class="box-right">
+                        <p class="message-box green">こんにちは</p>
+                    </div>
+
+
                 </div>
                 <div id="text-area" style={{ textAlign: 'center' }}>
                     <select name="sample">
