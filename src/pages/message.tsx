@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from "react";
 import { Inter } from '@next/font/google'
+import Talk from "../components/talkelement/talk";
 // import '../styles/message.css';
 // import styles from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,20 +10,7 @@ import Button from 'react-bootstrap/Button';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Message() {
-    const externalWebsites = [
-        {
-            name: "Github",
-            url: "https://github.com/masamichi0207",
-            logo: "/git.png",
-            imageAlt: "Github logo",
-        },
-        {
-            name: "Instagram",
-            url: "https://www.instagram.com/masamichi7227/",
-            logo: "/insta.png",
-            imageAlt: "insta logo",
-        },
-    ]
+
     return (
         <>
             <Head>
@@ -39,26 +27,45 @@ export default function Message() {
                     overflow: "scroll",
                     background: "url(/talk.png)"
                 }}>
-                    <div className="box-left">
-                        <p className="message-box white">こんにちは</p>
+                    <div className="box-left"
+                        style={{
+                            display: "flex",
+                            justifyContent: 'flex-start',
+                        }}>
+                        <div className='message-box' style={{
+                            padding: "25px",
+                            maxWidth: "40%",
+                            margin: "10px",
+                            borderRadius: "30px",
+                            backgroundColor: 'white'
+                        }}>こんにちは
+                        </div>
                     </div>
-
-                    <div className="box-right">
-                        <p className="message-box green">こんにちは</p>
+                    <Talk></Talk>
+                    <div className="box-right" style={{
+                        display: "flex",
+                        justifyContent: 'flex-end',
+                    }}>
+                        <div className='message-box' style={{
+                            padding: "25px",
+                            maxWidth: "40%",
+                            margin: "10px",
+                            borderRadius: "30px",
+                            backgroundColor: 'yellowgreen'
+                        }}>
+                            こんにちは
+                        </div>
                     </div>
 
 
                 </div>
-                <div id="text-area" style={{ textAlign: 'center' }}>
+                <div id="text-area" >
                     <select name="sample">
-                        <option value="sample">サム</option>
-                        <option value="sample">アンディ</option>
+                        <option value="sam">サム</option>
+                        <option value="andy">アンディ</option>
                     </select>
                     <input type="text" placeholder='メッセージを入力してください' style={{ width: "89%" }} />
-
                     <Button variant="primary">送信</Button>
-                </div>
-                <div >
                 </div>
             </main>
 
