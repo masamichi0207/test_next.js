@@ -28,7 +28,7 @@ export default function Message() {
                     overflow: "scroll",
                     background: "url(/talk.png)"
                 }}>
-                    {/* <div className="box-left"
+                    <div className="box-left"
                         style={{
                             display: "flex",
                             justifyContent: 'flex-start',
@@ -41,8 +41,8 @@ export default function Message() {
                             backgroundColor: 'white'
                         }}>こんにちは
                         </div>
-                    </div> */}
-                    <Talk　></Talk>
+                    </div>
+                    <Talk　>こんにちは</Talk>
                     <div className="box-right" style={{
                         display: "flex",
                         justifyContent: 'flex-end',
