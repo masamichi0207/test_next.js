@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from "react";
 import { Inter } from '@next/font/google'
 import Talk from "../components/talkelement/talk";
+
 // import '../styles/message.css';
 // import styles from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +28,7 @@ export default function Message() {
                     overflow: "scroll",
                     background: "url(/talk.png)"
                 }}>
-                    <div className="box-left"
+                    {/* <div className="box-left"
                         style={{
                             display: "flex",
                             justifyContent: 'flex-start',
@@ -40,8 +41,8 @@ export default function Message() {
                             backgroundColor: 'white'
                         }}>こんにちは
                         </div>
-                    </div>
-                    <Talk></Talk>
+                    </div> */}
+                    <Talk　></Talk>
                     <div className="box-right" style={{
                         display: "flex",
                         justifyContent: 'flex-end',

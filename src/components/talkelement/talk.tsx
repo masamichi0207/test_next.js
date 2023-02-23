@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import './talk.css';
+import styles from './talk.module.css';
 
 class Talk extends Component {
     render() {
-        return <div className="box-left">
-            <div className='message-box'>
+        return <div className={styles["box-left"]}>
+            <div className={styles['message-box']}>
             </div>
         </div >;
     }

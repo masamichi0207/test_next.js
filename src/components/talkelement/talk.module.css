@@ -1,0 +1,12 @@
+.box-left {
+    display: "flex";
+    justify-content: 'flex-start';
+}
+
+.message-box {
+    padding: "25px";
+    max-width: "40%";
+    margin: "10px";
+    border-radius: "30px";
+    background-color: 'white'
+}
