@@ -1,13 +1,24 @@
 import React, { Component } from "react";
-import styles from './talk.module.css';
-
-class Talk extends Component {
-    render() {
-        return <div className={styles["box-left"]}>
-            <div className={styles['message-box']}>
-            </div>
-        </div >;
-    }
+import styl from './talk.module.css';
+interface Talk {
+    children: React.ReactNode;
+}
+// class Talk extends Component {
+//     render() {
+//         return <div className={style["box-left"]}>
+//             <div className={style['message-box']}>
+//                 {props.children}
+//             </div>
+//         </div >;
+//     }
+// }
+const Talk = (props: Talk) => {
+    return <div className={styl.boxleft
+    }>
+        <div className={styl.messagebox}>
+            {props.children}
+        </div >
+    </div >
 }
 
 export default Talk;

@@ -1,9 +1,9 @@
-.box-left {
+.boxleft {
     display: "flex";
     justify-content: 'flex-start';
 }
 
-.message-box {
+.messagebox {
     padding: "25px";
     max-width: "40%";
     margin: "10px";

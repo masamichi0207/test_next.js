@@ -42,7 +42,7 @@ export default function Message() {
                         }}>こんにちは
                         </div>
                     </div>
-                    <Talk　>こんにちは</Talk>
+                    <Talk　>aho</Talk>
                     <div className="box-right" style={{
                         display: "flex",
                         justifyContent: 'flex-end',
