@@ -1,12 +1,26 @@
-.boxleft {
-    display: "flex";
-    justify-content: 'flex-start';
+.sam_talk {
+    display: flex;
+    justify-content: flex-start;
 }
 
-.messagebox {
-    padding: "25px";
-    max-width: "40%";
-    margin: "10px";
-    border-radius: "30px";
-    background-color: 'white'
+.sam_box {
+    padding: 25px;
+    max-width: 40%;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: yellowgreen
+}
+
+
+.andy_talk {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.andy_box {
+    padding: 25px;
+    max-width: 40%;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: white
 }

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React from "react";
 import { Inter } from '@next/font/google'
 import Talk from "../components/talkelement/talk";
-
+import Send from "../components/talkelement/Send";
 // import '../styles/message.css';
 // import styles from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,37 +28,10 @@ export default function Message() {
                     overflow: "scroll",
                     background: "url(/talk.png)"
                 }}>
-                    <div className="box-left"
-                        style={{
-                            display: "flex",
-                            justifyContent: 'flex-start',
-                        }}>
-                        <div className='message-box' style={{
-                            padding: "25px",
-                            maxWidth: "40%",
-                            margin: "10px",
-                            borderRadius: "30px",
-                            backgroundColor: 'white'
-                        }}>こんにちは
-                        </div>
-                    </div>
-                    <Talk　>aho</Talk>
-                    <div className="box-right" style={{
-                        display: "flex",
-                        justifyContent: 'flex-end',
-                    }}>
-                        <div className='message-box' style={{
-                            padding: "25px",
-                            maxWidth: "40%",
-                            margin: "10px",
-                            borderRadius: "30px",
-                            backgroundColor: 'yellowgreen'
-                        }}>
-                            こんにちは
-                        </div>
-                    </div>
-
-
+                    <Talk
+                        name1='andy_talk'
+                        name2='andy_box'
+                    >こんにちは</Talk>
                 </div>
                 <div id="text-area" >
                     <select name="sample">
@@ -66,7 +39,7 @@ export default function Message() {
                         <option value="andy">アンディ</option>
                     </select>
                     <input type="text" placeholder='メッセージを入力してください' style={{ width: "89%" }} />
-                    <Button variant="primary">送信</Button>
+                    <Send></Send>
                 </div>
             </main>
 

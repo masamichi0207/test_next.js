@@ -1,21 +1,14 @@
 import React, { Component } from "react";
-import styl from './talk.module.css';
-interface Talk {
+import style from './talk.module.css';
+
+interface TalkProps {
     children: React.ReactNode;
+    name1: string;
+    name2: string;
 }
-// class Talk extends Component {
-//     render() {
-//         return <div className={style["box-left"]}>
-//             <div className={style['message-box']}>
-//                 {props.children}
-//             </div>
-//         </div >;
-//     }
-// }
-const Talk = (props: Talk) => {
-    return <div className={styl.boxleft
-    }>
-        <div className={styl.messagebox}>
+const Talk = (props: TalkProps) => {
+    return (<div className={style.andy_box}>
+        <div className={style.props.name2}>
             {props.children}
         </div >
     </div >
