@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import React from "react";
+import React, { useRef, Component } from "react";
 import { Inter } from '@next/font/google'
 import Talk from "../components/talkelement/talk";
 import Send from "../components/talkelement/Send";
