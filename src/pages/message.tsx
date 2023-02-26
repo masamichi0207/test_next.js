@@ -4,10 +4,7 @@ import React from "react";
 import { Inter } from '@next/font/google'
 import Talk from "../components/talkelement/talk";
 import Send from "../components/talkelement/Send";
-// import '../styles/message.css';
-// import styles from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Message() {
@@ -29,16 +26,11 @@ export default function Message() {
                     background: "url(/talk.png)"
                 }}>
                     <Talk
-                        name1='andy_talk'
-                        name2='andy_box'
+                        name1={"andy_talk"}
+                        name2={"andy_box"}
                     >こんにちは</Talk>
                 </div>
                 <div id="text-area" >
-                    <select name="sample">
-                        <option value="sam">サム</option>
-                        <option value="andy">アンディ</option>
-                    </select>
-                    <input type="text" placeholder='メッセージを入力してください' style={{ width: "89%" }} />
                     <Send></Send>
                 </div>
             </main>

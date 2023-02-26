@@ -7,11 +7,12 @@ interface TalkProps {
     name2: string;
 }
 const Talk = (props: TalkProps) => {
-    return (<div className={style.andy_box}>
-        <div className={style.props.name2}>
+    return (<div className={style[props.name1]}>
+        <div className={style[props.name2]}>
             {props.children}
         </div >
     </div >
+    );
 }
 
 export default Talk;
