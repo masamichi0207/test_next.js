@@ -1,23 +1,21 @@
 import Button from 'react-bootstrap/Button';
-import React, { useRef, Component } from "react";
+import React, { useRef, Component, useState } from "react";
 import ReactDOM from 'react-dom';
 import Talk from "./talk";
 interface Send {
-
+    talk_list: object;
 }
 const Send = (props: Send) => {
     const inputEl = useRef<HTMLInputElement>(null);
     const selectEl = useRef<HTMLSelectElement>(null);
     const Button_send = () => {
+        const list = [{ name1: "andy_talk", name2: "'andy_box'", content: "やほ" }];
+        const result = props.talk_list.concat(list);
+        const aho = Object.assign(props.talk_list, list);
+        // const newTodo = props.talk_list
         console.log(selectEl.current?.value);
         console.log(inputEl.current?.value);
-        const add_area = document.getElementById("talk-room");
-        // 新しいHTML要素を作成
-        const new_element = React.createElement(
-            Talk, { children: inputEl.current?.value, name1: 'andy_talk', name2: "andy_box" }
-        );
-        console.log(add_area);
-        console.log(new_element);
+        console.log(aho);
     }
     return (
         <>

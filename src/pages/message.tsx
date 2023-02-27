@@ -14,6 +14,16 @@ export default function Message() {
             name2: 'andy_box',
             content: 'こんにちは',
         },
+        {
+            name1: "andy_talk",
+            name2: 'andy_box',
+            content: 'は',
+        },
+        {
+            name1: "andy_talk",
+            name2: 'andy_box',
+            content: 'kuso',
+        }
     ]
 
     return (
@@ -40,7 +50,7 @@ export default function Message() {
                     ))}
                 </div>
                 <div id="text-area" >
-                    <Send></Send>
+                    <Send talk_list={talk_list}></Send>
                 </div>
             </main>
 
