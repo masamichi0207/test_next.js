@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import React, { useRef, Component } from "react";
+import React, { useRef, Component, useState } from "react";
 import { Inter } from '@next/font/google'
 import Talk from "../components/talkelement/talk";
 import Send from "../components/talkelement/Send";
@@ -8,6 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Message() {
+    const talk_list = [
+        {
+            name1: "andy_talk",
+            name2: 'andy_box',
+            content: 'こんにちは',
+        },
+    ]
 
     return (
         <>
@@ -25,10 +32,12 @@ export default function Message() {
                     overflow: "scroll",
                     background: "url(/talk.png)"
                 }}>
-                    <Talk
-                        name1={"andy_talk"}
-                        name2={"andy_box"}
-                    >こんにちは</Talk>
+                    {talk_list.map((talk) => (
+                        <Talk
+                            name1={talk.name1}
+                            name2={talk.name2}
+                        >{talk.content}</Talk>
+                    ))}
                 </div>
                 <div id="text-area" >
                     <Send></Send>

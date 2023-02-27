@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import style from './talk.module.css';
 
 interface TalkProps {
-    children: React.ReactNode;
     name1: string;
     name2: string;
+    children: React.ReactNode;
 }
 const Talk = (props: TalkProps) => {
     return (<div className={style[props.name1]}>

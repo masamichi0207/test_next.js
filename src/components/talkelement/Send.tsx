@@ -1,10 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import React, { useRef, Component } from "react";
+import ReactDOM from 'react-dom';
 import Talk from "./talk";
 interface Send {
-    children?: React.ReactNode;
-    class_name1?: string;
-    class_name2?: string;
+
 }
 const Send = (props: Send) => {
     const inputEl = useRef<HTMLInputElement>(null);
@@ -15,13 +14,10 @@ const Send = (props: Send) => {
         const add_area = document.getElementById("talk-room");
         // 新しいHTML要素を作成
         const new_element = React.createElement(
-            Talk, { children: inputEl.current?.value, name1: 'andy_talk', name2: "andy_box" },
+            Talk, { children: inputEl.current?.value, name1: 'andy_talk', name2: "andy_box" }
         );
-        // new_element.setAttribute("name1", "andy_talk");
-        // new_element.setAttribute("name2", "andy_box");
-        // new_element.innerHTML = inputEl.current?.value;
-        add_area?.appendChild(new_element);
-
+        console.log(add_area);
+        console.log(new_element);
     }
     return (
         <>
